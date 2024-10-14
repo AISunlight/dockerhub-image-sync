@@ -26,5 +26,6 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/nginx:latest docker://sunlightas.asuscomm.com:4888/twofish_dockerhub_mirror/nginx:latest
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/nginx:latest docker://sunlightas.asuscomm.com:4888/mirror/nginx:latest
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.2.9-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:17.2.9-ce.0
  
