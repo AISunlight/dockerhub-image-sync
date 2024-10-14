@@ -26,5 +26,5 @@ jobs:
     - name: Use Skopeo Tools Sync Image to Docker Hub
       run: |
         #!/usr/bin/env bash
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false --dest-daemon-host https://docker.liuchuanyang.com:9998 docker://docker.io/halohub/halo:2.17.0 docker://docker.liuchuanyang.com:9998/twofish_dockerhub_mirror/halo:2.17.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/halohub/halo:2.17.0 https://docker.liuchuanyang.com:9998/twofish_dockerhub_mirror/halo:2.17.0
  
