@@ -38,4 +38,11 @@ jobs:
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jess/imagemin:latest docker://sunlightas.asuscomm.com:4888/mirror/imagemin:latest
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.2.9-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:17.2.9-ce.0
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jc21/registry-ui:2.0.2 docker://sunlightas.asuscomm.com:4888/mirror/registry-ui:2.0.2
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.3.9-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:16.3.9-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.7.10-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:16.7.10-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.11.10-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:16.11.10-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.1.8-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:17.1.8-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.3.7-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:17.3.7-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.5.4-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:17.5.4-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.7.0-ce.0 docker://sunlightas.asuscomm.com:4888/mirror/gitlab-ce:17.7.0-ce.0
  
