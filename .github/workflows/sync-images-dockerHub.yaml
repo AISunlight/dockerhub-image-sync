@@ -27,7 +27,8 @@ jobs:
       run: |
         #!/usr/bin/env bash
         # jess/imagemin:latest jc21/nginx-proxy-manager
-        # docker pull vaultwarden/server:1.32.5
+        # docker pull vaultwarden/server:1.32.5        
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/srs:5 docker://sunlightas.asuscomm.com:4888/mirror/srs:latest
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/verdaccio/verdaccio:latest docker://sunlightas.asuscomm.com:4888/mirror/verdaccio:latest
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/vaultwarden/server:1.32.5 docker://sunlightas.asuscomm.com:4888/mirror/vaultwarden_server:1.32.5
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jenkins/jenkins:latest docker://sunlightas.asuscomm.com:4888/mirror/jenkins:latest
