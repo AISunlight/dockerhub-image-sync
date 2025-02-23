@@ -28,6 +28,9 @@ jobs:
         #!/usr/bin/env bash
         # jess/imagemin:latest jc21/nginx-proxy-manager
         # docker pull vaultwarden/server:1.32.5        
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/grafana:latest docker://sunlightas.asuscomm.com:4888/mirror/grafana:latest
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/promtail:latest docker://sunlightas.asuscomm.com:4888/mirror/promtail:latest
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/loki:latest docker://sunlightas.asuscomm.com:4888/mirror/loki:latest
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/oryx:5 docker://sunlightas.asuscomm.com:4888/mirror/oryx:latest
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/srs:5 docker://sunlightas.asuscomm.com:4888/mirror/srs:latest
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/verdaccio/verdaccio:latest docker://sunlightas.asuscomm.com:4888/mirror/verdaccio:latest
