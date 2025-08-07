@@ -28,28 +28,33 @@ jobs:
         #!/usr/bin/env bash
         # jess/imagemin:latest jc21/nginx-proxy-manager
         # docker pull vaultwarden/server:1.32.5        
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/allinssl/allinssl:latest docker://dsm.liuchuanyang.com:4888/mirror/allinssl:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/grafana:latest docker://dsm.liuchuanyang.com:4888/mirror/grafana:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/promtail:latest docker://dsm.liuchuanyang.com:4888/mirror/promtail:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/loki:latest docker://dsm.liuchuanyang.com:4888/mirror/loki:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/oryx:5 docker://dsm.liuchuanyang.com:4888/mirror/oryx:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/srs:5 docker://dsm.liuchuanyang.com:4888/mirror/srs:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/verdaccio/verdaccio:latest docker://dsm.liuchuanyang.com:4888/mirror/verdaccio:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/vaultwarden/server:1.32.5 docker://dsm.liuchuanyang.com:4888/mirror/vaultwarden_server:1.32.5
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jenkins/jenkins:latest docker://dsm.liuchuanyang.com:4888/mirror/jenkins:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/node:lts-alpine docker://dsm.liuchuanyang.com:4888/mirror/node:lts-alpine
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/mysql:8.4.2 docker://dsm.liuchuanyang.com:4888/mirror/mysql:8.4.2
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/redis:latest docker://dsm.liuchuanyang.com:4888/mirror/redis:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jc21/nginx-proxy-manager:latest docker://dsm.liuchuanyang.com:4888/mirror/nginx-proxy-manager:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/nginx:latest docker://dsm.liuchuanyang.com:4888/mirror/nginx:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jess/imagemin:latest docker://dsm.liuchuanyang.com:4888/mirror/imagemin:latest
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.2.9-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.2.9-ce.0
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jc21/registry-ui:2.0.2 docker://dsm.liuchuanyang.com:4888/mirror/registry-ui:2.0.2
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.3.9-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:16.3.9-ce.0
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.7.10-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:16.7.10-ce.0
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.11.10-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:16.11.10-ce.0
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.1.8-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.1.8-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/allinssl/allinssl:latest docker://dsm.liuchuanyang.com:4888/mirror/allinssl:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/grafana:latest docker://dsm.liuchuanyang.com:4888/mirror/grafana:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/promtail:latest docker://dsm.liuchuanyang.com:4888/mirror/promtail:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/grafana/loki:latest docker://dsm.liuchuanyang.com:4888/mirror/loki:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/oryx:5 docker://dsm.liuchuanyang.com:4888/mirror/oryx:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://registry.cn-hangzhou.aliyuncs.com/ossrs/srs:5 docker://dsm.liuchuanyang.com:4888/mirror/srs:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/verdaccio/verdaccio:latest docker://dsm.liuchuanyang.com:4888/mirror/verdaccio:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/vaultwarden/server:1.32.5 docker://dsm.liuchuanyang.com:4888/mirror/vaultwarden_server:1.32.5
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jenkins/jenkins:latest docker://dsm.liuchuanyang.com:4888/mirror/jenkins:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/node:lts-alpine docker://dsm.liuchuanyang.com:4888/mirror/node:lts-alpine
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/mysql:8.4.2 docker://dsm.liuchuanyang.com:4888/mirror/mysql:8.4.2
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/redis:latest docker://dsm.liuchuanyang.com:4888/mirror/redis:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jc21/nginx-proxy-manager:latest docker://dsm.liuchuanyang.com:4888/mirror/nginx-proxy-manager:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/nginx:latest docker://dsm.liuchuanyang.com:4888/mirror/nginx:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jess/imagemin:latest docker://dsm.liuchuanyang.com:4888/mirror/imagemin:latest
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.2.9-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.2.9-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/jc21/registry-ui:2.0.2 docker://dsm.liuchuanyang.com:4888/mirror/registry-ui:2.0.2
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.3.9-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:16.3.9-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.7.10-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:16.7.10-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:16.11.10-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:16.11.10-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.1.8-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.1.8-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.3.7-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.3.7-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.5.4-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.5.4-ce.0
+        # skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.7.0-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.7.0-ce.0
         skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.3.7-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.3.7-ce.0
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.5.4-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.5.4-ce.0
-        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.7.0-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.7.0-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.5.5-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.5.5-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.8.7-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.8.7-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:17.11.6-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:17.11.6-ce.0
+        skopeo copy --insecure-policy --src-tls-verify=false --dest-tls-verify=false docker://docker.io/gitlab/gitlab-ce:18.2.1-ce.0 docker://dsm.liuchuanyang.com:4888/mirror/gitlab-ce:18.2.1-ce.0
  
